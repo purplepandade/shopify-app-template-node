@@ -1,3 +1,27 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-scopes = "write_products"
+name = "Wearn Connector"
+client_id = "e3b71f393c029e0d935522f46089c2b3"
+application_url = "https://cw-sad-tan-tournament.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,read_orders"
+
+[auth]
+redirect_urls = [
+  "https://cw-sad-tan-tournament.trycloudflare.com/auth/callback",
+  "https://cw-sad-tan-tournament.trycloudflare.com/auth/shopify/callback",
+  "https://cw-sad-tan-tournament.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "purplepanda-dev.myshopify.com"
